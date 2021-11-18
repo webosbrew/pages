@@ -1,10 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+
 AUTHOR = 'webosbrew.org'
-SITENAME = 'Home - webOS Homebrew Project'
+SITENAME = 'webOS Homebrew Project'
 SITEURL = ''
 
 PATH = 'content'
 
 STATIC_PATHS = ['extra/CNAME']
+PAGE_PATHS = ['pages']
 
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
@@ -21,15 +25,21 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+MENUITEMS = (
+    ('Home', '/'),
+    ('Repo', 'https://repo.webosbrew.org'),
+)
+
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (
+    ('webOS Homebrew', 'https://github.com/webosbrew/'),
+    ('openlgtv', 'https://openlgtv.github.io/'),
+)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('openlgtv Discord', 'https://discord.gg/xWqRVEm'),
+)
 
 DEFAULT_PAGINATION = 10
 
