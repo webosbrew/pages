@@ -19,9 +19,6 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install -r ./requirements.txt
 
-      - name: Generate repository data
-        run: python3 -m repogen -i ./packages -o ./content
-
       - name: Generate site content
         run: pelican content
 
