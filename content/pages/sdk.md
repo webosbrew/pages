@@ -30,3 +30,13 @@ ares-setup-device -a webos -i "username=root" -i "privatekey=/path/to/id_rsa" -i
 ```
 
 **Note:** @webosose/ares-cli doesn't need to be installed globally - you can use a package installed in a local project directory by just prefixing above commands with local path, like so: `node_modules/.bin/ares-setup-device ...`
+
+## Using SSH without SDK on unrooted devices
+Public key fetched using the method above can be used to connect to the TV using
+plain SSH client:
+```sh
+ssh -i webos_rsa -p 9922 prisoner@TV_IP
+```
+
+Note: non-rooted prisoner user does not have access to PTS, and thus `bash` will
+behave strangely
