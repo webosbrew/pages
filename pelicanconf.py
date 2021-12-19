@@ -9,6 +9,7 @@ PATH = 'content'
 
 STATIC_PATHS = ['extra/CNAME']
 PAGE_PATHS = ['pages']
+DISPLAY_PAGES_ON_MENU = False
 
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
