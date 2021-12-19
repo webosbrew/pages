@@ -1,0 +1,203 @@
+service: com.webos.service.eim
+paths:
+  /setDeviceInfo:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /setLastInput:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /getAllInputStatus:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /addDevice:
+    summary: 'Registers an application as an input. `"supportGIP": true` needs to be set in application manifest for this to work.'
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: ["appId", "pigImage", "mvpdIcon"]
+      properties:
+        appId:
+          type: string
+          description: "Application to be registered as an input device. Does not need to be equal to calling application."
+        pigImage:
+          type: string
+          description: 'Image rendered in "Input Hub" app, relative to main application directory. Can be set to empty string. eim crashes when this field is missing.'
+        mvpdIcon:
+          type: string
+          description: '???; Required before webOS 3.x, can be set to empty string.'
+        type:
+          type: string
+          enum: ["MVPD_IP", "MVPD_RF"]
+        showPopup:
+          type: boolean
+          description: "Show a popup notification that an application has been registered."
+        label:
+          type: string
+          description: "Application name used in notification popup."
+        description:
+          type: string
+          description: "Description rendered in Input Hub"
+
+    response:
+      type: object
+      properties: {}
+  /setChosenDevice:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /getTotalDeviceList:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /updateVirtualDevice:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /getLastInput:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /getInputStatus:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /registerAppToBlockNoti:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /getCurrentInput:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /getDeviceInfo:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /deleteDevice:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - public
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+
