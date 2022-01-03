@@ -13,11 +13,13 @@ This is partially based on: https://webostv.developer.lge.com/develop/app-test/u
 
 1. Install Developer Mode app from Content Store
 2. Enable developer mode, enable keyserver
-3. Download TV's private key: `http://TV_IP:9991/webos_rsa`
-4. Configure the device using `ares-setup-device` (`-a` may need to be replaced with `-m` if device named `webos` is already configured)
+3. Download TV's private key: `http://TV_IP:9991/webos_rsa` and save under `$HOME/.ssh`
+4. As with any SSH key, restrict its access rights: `chmod 600 ~/.ssh/webos_rsa`
+5. You can test the key with: `ssh-keygen -y -P "PASSPHRASE" -f ~/.ssh/webos_rsa`
+6. Configure the device using `ares-setup-device` (`-a` may need to be replaced with `-m` if device named `webos` is already configured)
     * `PASSPHRASE` is the 6-character passphrase printed on screen in developer mode app
 ```sh
-ares-setup-device -a webos -i "username=prisoner" -i "privatekey=/path/to/downloaded/webos_rsa" -i "passphrase=PASSPHRASE" -i "host=TV_IP" -i "port=9922"
+ares-setup-device -a webos -i "username=prisoner" -i "privatekey=webos_rsa" -i "passphrase=PASSPHRASE" -i "host=TV_IP" -i "port=9922"
 ```
 
 ## Configuring @webosose/ares-cli with rooted TV
@@ -26,7 +28,7 @@ ares-setup-device -a webos -i "username=prisoner" -i "privatekey=/path/to/downlo
 3. Copy the public key (`id_rsa.pub`) to `/home/root/.ssh/authorized_keys` on TV
 4. Configure the device using `ares-setup-device` (`-a` may need to be replaced with `-m` if device named `webos` is already configured)
 ```sh
-ares-setup-device -a webos -i "username=root" -i "privatekey=/path/to/id_rsa" -i "passphrase=SSH_KEY_PASSPHRASE" -i "host=TV_IP" -i "port=22"
+ares-setup-device -a webos -i "username=root" -i "privatekey=id_rsa" -i "passphrase=SSH_KEY_PASSPHRASE" -i "host=TV_IP" -i "port=22"
 ```
 
 **Note:** @webosose/ares-cli doesn't need to be installed globally - you can use a package installed in a local project directory by just prefixing above commands with local path, like so: `node_modules/.bin/ares-setup-device ...`
