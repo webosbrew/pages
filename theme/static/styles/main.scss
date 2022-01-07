@@ -1,0 +1,59 @@
+$font-color: white;
+$color-accent: #cf0551;
+
+html {
+  background-color: black;
+  color: $font-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: $color-accent;
+
+  &:visited {
+    color: #c607e3;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: -8px;
+  background-color: #202020;
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  nav#menu {
+
+    ul {
+      display: inline;
+      padding: 10px;
+      margin-left: 10px;
+
+      li {
+        display: inline;
+        font-weight: bold;
+
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        a {
+          color: $font-color;
+          text-decoration: none;
+
+          &:visited {
+            color: $font-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  padding: 10px;
+}

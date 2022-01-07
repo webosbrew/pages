@@ -1,2 +1,4 @@
 pelican[markdown]~=4.7
 ghp-import~=2.0
+pyscss~=1.3.7
+livereload~=2.6.3
