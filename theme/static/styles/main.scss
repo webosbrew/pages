@@ -1,6 +1,9 @@
 $font-color: white;
 $color-accent: #cf0551;
 
+$content-width: 720px;
+$desktop-min-width: 960px;
+
 html {
   background-color: black;
   color: $font-color;
@@ -61,7 +64,7 @@ header {
 }
 
 div#content {
-  width: 960px;
+  width: $desktop-min-width;
   left: 0;
   right: 0;
   box-sizing: border-box;
@@ -74,7 +77,7 @@ div#content {
 
   .main {
     width: auto;
-    max-width: 720px;
+    max-width: $content-width;
     flex: 1 1 auto;
     padding: 20px;
     border: #333333 1px solid;
@@ -86,7 +89,7 @@ div#content {
     flex: 0 0 auto;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: $desktop-min-width) {
     width: auto;
     flex-flow: column;
     justify-content: unset;
@@ -99,15 +102,15 @@ div#content {
     .side {
       width: 100%;
       flex: 1 0 auto;
-      max-width: 720px;
+      max-width: $content-width;
     }
   }
 }
 
 footer {
-  max-width: 720px;
-  left: 0px;
-  right: 0px;
+  max-width: $content-width;
+  left: 0;
+  right: 0;
   margin: auto;
   text-align: center;
 }
