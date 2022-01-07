@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+
 AUTHOR = 'webosbrew.org'
 SITENAME = 'webOS Homebrew Project'
 SITEURL = ''
