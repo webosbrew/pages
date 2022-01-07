@@ -1,5 +1,5 @@
 Title: Development Tutorial
-save_as: develop/tutorials.html
+save_as: develop/tutorials/index.html
 
 ## IDE Setup
 
@@ -7,4 +7,4 @@ save_as: develop/tutorials.html
 ### [CLion]()
 ### [Visual Studio Code]()
 
-[Develop Native GUI App](tutorials/native-gui-app)
+[Develop Native GUI App](./native-gui-app.html)
