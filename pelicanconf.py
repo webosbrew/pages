@@ -28,6 +28,7 @@ AUTHOR_FEED_RSS = None
 
 MENUITEMS = (
     ('Home', '/'),
+    ('Develop', '/develop'),
     ('Repo', 'https://repo.webosbrew.org'),
 )
 

@@ -1,4 +1,4 @@
-Title: Home - webOS Homebrew Project
+Title: Home
 URL: 
 save_as: index.html
 
