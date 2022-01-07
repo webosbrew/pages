@@ -64,6 +64,7 @@ div#content {
 
   .main {
     max-width: 720px;
+    flex-grow: 1;
     padding: 20px;
     border: #333333 1px solid;
     border-radius: 4px;
