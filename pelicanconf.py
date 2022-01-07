@@ -6,7 +6,7 @@ SITENAME = 'webOS Homebrew Project'
 SITEURL = ''
 
 THEME = './theme'
-PLUGIN_PATHS = ['./plugins']
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ['assets']
 ASSET_SOURCE_PATHS = ['static']
 
