@@ -7,7 +7,7 @@ SITEURL = ''
 THEME = './theme'
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['assets']
-ASSET_SOURCE_PATHS = ['static/styles']
+ASSET_SOURCE_PATHS = ['static']
 
 PATH = 'content'
 
