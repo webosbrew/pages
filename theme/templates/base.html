@@ -68,9 +68,19 @@
         </ul>
     </nav><!-- /#menu -->
 </header>
-<div class="content">
-    {% block content %}
-    {% endblock %}
+<div id="content">
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="side">
+        <h2>Links</h2>
+        <ul>
+            {% for name, link in LINKS %}
+            <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div><!-- /.blogroll -->
 </div>
 <footer id="contentinfo" class="body">
     <address id="about" class="vcard body">

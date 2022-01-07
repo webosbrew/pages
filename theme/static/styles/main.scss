@@ -7,11 +7,12 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-a {
+a, a:visited {
   color: $color-accent;
+  text-decoration: none;
 
-  &:visited {
-    color: #c607e3;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -54,6 +55,30 @@ header {
   }
 }
 
-.content {
+div#content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  column-gap: 30px;
   padding: 10px;
+
+  .main {
+    max-width: 720px;
+    padding: 20px;
+    border: #333333 1px solid;
+    border-radius: 4px;
+  }
+
+  .side {
+    min-width: 320px;
+    max-width: 320px;
+    flex-grow: 1;
+  }
+}
+
+footer {
+  max-width: 720px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
 }

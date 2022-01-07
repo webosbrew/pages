@@ -40,10 +40,6 @@ MENUITEMS = (
 LINKS = (
     ('webOS Homebrew', 'https://github.com/webosbrew/'),
     ('openlgtv', 'https://openlgtv.github.io/'),
-)
-
-# Social widget
-SOCIAL = (
     ('openlgtv Discord', 'https://discord.gg/xWqRVEm'),
 )
 
