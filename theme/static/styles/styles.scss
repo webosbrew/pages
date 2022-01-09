@@ -1,0 +1,41 @@
+$font-color: white;
+$color-accent: #cf0551;
+
+
+html {
+  background-color: black;
+  color: $font-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a, a:visited {
+  color: $color-accent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  background-color: #202020;
+
+
+  nav#menu ul li {
+    font-weight: bold;
+
+    a {
+      color: $font-color;
+      text-decoration: none;
+
+      &:visited {
+        color: $font-color;
+      }
+    }
+  }
+}
+
+div#content .main {
+  border: #333333 1px solid;
+  border-radius: 4px;
+}
