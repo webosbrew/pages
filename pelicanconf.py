@@ -21,6 +21,16 @@ EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
 }
 
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.toc': {
+            'anchorlink': False,
+            'permalink': True,
+        },
+    },
+    'output_format': 'html5',
+}
+
 TIMEZONE = 'Asia/Tokyo'
 
 DEFAULT_LANG = 'EN'
