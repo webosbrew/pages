@@ -6,7 +6,7 @@ AUTHOR = 'webosbrew.org'
 SITENAME = 'webOS Homebrew Project'
 SITEURL = ''
 
-THEME = './theme'
+THEME = 'webosbrew'
 WEBASSETS_SOURCE_PATHS = ['static']
 
 PATH = 'content'
