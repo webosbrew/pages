@@ -25,7 +25,6 @@ MARKDOWN = {
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
         'markdown.extensions.toc': {
-            'anchorlink': False,
             'permalink': True,
         },
     },

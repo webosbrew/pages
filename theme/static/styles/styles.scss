@@ -8,9 +8,26 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+* {
+
+  > a.headerlink {
+    visibility: hidden;
+  }
+
+  &:hover {
+    > a.headerlink {
+      visibility: visible;
+    }
+  }
+}
+
 a, a:visited {
   color: $color-accent;
   text-decoration: none;
+
+  &.headerlink {
+    margin-left: 10px;
+  }
 
   &:hover {
     text-decoration: underline;
