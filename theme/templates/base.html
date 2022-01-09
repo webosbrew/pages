@@ -74,12 +74,9 @@
         {% endblock %}
     </div>
     <div class="side">
-        <h2>Links</h2>
-        <ul>
-            {% for name, link in LINKS %}
-            <li><a href="{{ link }}">{{ name }}</a></li>
-            {% endfor %}
-        </ul>
+        {% block sidebar %}
+        {% include "sidebar.html" %}
+        {% endblock %}
     </div><!-- /.blogroll -->
 </div>
 <hr>

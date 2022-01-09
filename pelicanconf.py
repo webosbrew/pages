@@ -39,9 +39,10 @@ MENUITEMS = (
 
 # Blogroll
 LINKS = (
-    ('webOS Homebrew', 'https://github.com/webosbrew/'),
+    ('Github Organization', 'https://github.com/webosbrew/'),
+    ('Join us on Discord', 'https://discord.gg/xWqRVEm'),
+    ('RootMy.TV', 'https://rootmy.tv/'),
     ('openlgtv', 'https://openlgtv.github.io/'),
-    ('openlgtv Discord', 'https://discord.gg/xWqRVEm'),
 )
 
 DEFAULT_PAGINATION = 10

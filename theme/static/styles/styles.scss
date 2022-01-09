@@ -44,7 +44,18 @@ footer {
   font-size: small;
 }
 
-div#content .main {
-  border: $color-border 1px solid;
-  border-radius: 4px;
+div#content {
+  .main {
+    border: $color-border 1px solid;
+    border-radius: 4px;
+  }
+  .side {
+    hr {
+      margin: 10px 0;
+    }
+    .links {
+      list-style: none;
+      padding-inline: 0;
+    }
+  }
 }
