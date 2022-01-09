@@ -1,6 +1,6 @@
 $font-color: white;
 $color-accent: #cf0551;
-
+$color-border: #333333;
 
 html {
   background-color: black;
@@ -17,9 +17,13 @@ a, a:visited {
   }
 }
 
+hr {
+  border-color: $color-border;
+  margin: 10px 15px;
+}
+
 header {
   background-color: #202020;
-
 
   nav#menu ul li {
     font-weight: bold;
@@ -35,7 +39,12 @@ header {
   }
 }
 
+footer {
+  color: #cccccc;
+  font-size: small;
+}
+
 div#content .main {
-  border: #333333 1px solid;
+  border: $color-border 1px solid;
   border-radius: 4px;
 }

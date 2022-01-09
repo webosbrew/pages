@@ -70,6 +70,7 @@ def serve(c):
     if OPEN_BROWSER_ON_SERVE:
         # Open site in default browser
         import webbrowser
+        # noinspection HttpUrlsUsage
         webbrowser.open("http://{host}:{port}".format(**CONFIG))
 
     sys.stderr.write('Serving at {host}:{port} ...\n'.format(**CONFIG))
@@ -119,6 +120,7 @@ def livereload(c):
     if OPEN_BROWSER_ON_SERVE:
         # Open site in default browser
         import webbrowser
+        # noinspection HttpUrlsUsage
         webbrowser.open("http://{host}:{port}".format(**CONFIG))
 
     server.serve(host=CONFIG['host'], port=CONFIG['port'], root=CONFIG['deploy_path'])

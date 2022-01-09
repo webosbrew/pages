@@ -59,7 +59,28 @@ div#content {
     flex: 0 0 auto;
   }
 
-  @media (max-width: $desktop-min-width) {
+}
+
+footer {
+  max-width: $desktop-min-width;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-flow: row;
+
+  .copyright {
+    flex: 1 0 auto;
+  }
+}
+
+.highlight {
+  padding: 0 10px;
+  overflow-x: auto;
+}
+
+@media (max-width: $desktop-min-width) {
+  div#content {
     width: auto;
     flex-flow: column;
     justify-content: unset;
@@ -69,24 +90,15 @@ div#content {
       width: 100%;
       flex: 1 0 auto;
     }
+
     .side {
       width: 100%;
       flex: 1 0 auto;
       max-width: $content-width;
     }
   }
-}
 
-footer {
-  max-width: $content-width;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-}
-
-.highlight {
-  padding: 0 10px;
-  overflow-x: auto;
-
+  footer {
+    max-width: $content-width;
+  }
 }

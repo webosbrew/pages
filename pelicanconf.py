@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+import datetime
 
 AUTHOR = 'webosbrew.org'
 SITENAME = 'webOS Homebrew Project'
@@ -47,3 +48,5 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+COPYRIGHT_YEAR = datetime.date.today().year
