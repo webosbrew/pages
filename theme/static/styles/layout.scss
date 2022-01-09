@@ -1,5 +1,8 @@
 $content-width: 720px;
-$desktop-min-width: 960px;
+$content-large-width: 960px;
+
+$desktop-small-width: 960px;
+$desktop-large-width: 1280px;
 
 h1 {
   margin-top: 0px;
@@ -34,8 +37,8 @@ header {
   }
 }
 
-div#content {
-  width: $desktop-min-width;
+#content {
+  width: $desktop-small-width;
   left: 0;
   right: 0;
   box-sizing: border-box;
@@ -62,7 +65,7 @@ div#content {
 }
 
 footer {
-  max-width: $desktop-min-width;
+  max-width: $desktop-small-width;
   left: 0;
   right: 0;
   margin: auto;
@@ -79,8 +82,8 @@ footer {
   overflow-x: auto;
 }
 
-@media (max-width: $desktop-min-width) {
-  div#content {
+@media (max-width: $desktop-small-width) {
+  #content {
     width: auto;
     flex-flow: column;
     justify-content: unset;
@@ -100,5 +103,18 @@ footer {
 
   footer {
     max-width: $content-width;
+  }
+}
+
+@media (min-width: $desktop-large-width) {
+  #content {
+    width: $desktop-large-width;
+
+    .main {
+      max-width: $content-large-width;
+    }
+  }
+  footer {
+    max-width: $desktop-large-width;
   }
 }
