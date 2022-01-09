@@ -47,7 +47,6 @@ MENUITEMS = (
     ('Develop', '/develop'),
 )
 
-# Blogroll
 LINKS = (
     ('Github Organization', 'https://github.com/webosbrew/'),
     ('Join us on Discord', 'https://discord.gg/xWqRVEm'),
