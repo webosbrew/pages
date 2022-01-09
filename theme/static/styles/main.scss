@@ -116,10 +116,11 @@ footer {
   text-align: center;
 }
 
-div.highlight {
+.highlight {
   padding: 0 10px;
   overflow-x: auto;
   background-color: #202020;
-}
+  color: #d0d0d0;
 
-@import './highlight.css';
+  @import 'highlight/native';
+}
