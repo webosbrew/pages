@@ -5,6 +5,7 @@ import datetime
 AUTHOR = 'webosbrew.org'
 SITENAME = 'webOS Homebrew Project'
 SITEURL = ''
+SOURCEURL = 'https://github.com/webosbrew/webosbrew.github.io/blob/main/content'
 
 THEME = 'webosbrew'
 WEBASSETS_SOURCE_PATHS = ['static']
