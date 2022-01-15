@@ -21,6 +21,12 @@ luna-send -n 1 -f luna://com.webos.service.applicationManager/launch '{"id":"com
 # Close app
 luna-send -n 1 'luna://com.webos.service.applicationManager/closeByAppId' '{"id":"com.webos.app.hdmi3"}'
 
+# Install app from local TVs storage
+luna-send -i -f luna://com.webos.appInstallService/dev/install '{"id":"com.ares.defaultName","ipkUrl":"/tmp/app.ipk","subscribe":true}'
+
+# Install app from remote HTTP url (requires Homebrew Channel)
+luna-send -i -f luna://org.webosbrew.hbchannel.service/install '{"ipkUrl":"https://.../app.ipk","ipkHash":"package-sha256sum"}'
+
 # Launch energy saving screen
 luna-send-pub -f -n 1 luna://com.webos.service.applicationManager/launch '{"id":"com.webos.app.tvhotkey","params":{"activateType":"energy-saving-mode"}}'
 
@@ -34,7 +40,7 @@ luna-send -n 1 'luna://com.webos.settingsservice/setSystemSettings' '{"category"
 ```sh
 # Note: com.webos.service.tv.capture below has been renamed to com.webos.service.capture on some devices, call signature is the same.
 
-luna-send -n 1 -f 'luna://com.webos.service.tv.capture/executeOneShot' '{"path":"/tmp/capture.png","method":"DISPLAY","format":"PNG"}'
+luna-send -n 1 -f 'luna://com.webos.service.tv.capture/executeOneShot' '{"path":"/tmp/capture.png","method":"DISPLAY","format":"PNG", "width": 1920, "height": 1080}'
 # Supported formats: BMP, JPG, PNG, RGB, RGBA, YUV422
 # Supported methods: SCREEN/DISPLAY (alias?), SCREEN_WITH_SOURCE_VIDEO, VIDEO, GRAPHIC, SOURCE/SCALER (alias?)
 ```
