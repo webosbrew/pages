@@ -64,3 +64,4 @@ by default.
     * [Logging]({filename}/pages/logging.md)
     * [Luna service bus]({filename}/pages/luna.md)
     * [appinfo.json app manifests]({filename}/pages/appinfo.md)
+    * [Commands Cheatsheet]({filename}/pages/cheatsheet.md)
