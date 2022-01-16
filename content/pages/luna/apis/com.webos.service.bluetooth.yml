@@ -1,0 +1,789 @@
+service: com.webos.service.bluetooth
+summary: |
+  Service responsible for bluetooth connectivity. Reversed on webOS 3.8. For equivalent
+  service on webOS 4.x and newer see `com.webos.service.bluetooth2`
+
+  "HID" here generally means Sony DualShock4 controllers.
+paths:
+  /service/disconnect:
+    summary: 'Disconnect Bluetooth device. Returns immediately'
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: ["service", "address"]
+      properties:
+        service:
+          type: string
+          enum: ["audio","hid"]
+          description: "Service type to disconnect"
+        address:
+          type: string
+          description: "Device address"
+    response:
+      type: object
+      properties: {}
+  /service/connect:
+    summary: 'Connect Bluetooth device. Returns immediately'
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: ["service", "address"]
+      properties:
+        service:
+          type: string
+          enum: ["audio","hid"]
+          description: "Service type to disconnect"
+        address:
+          type: string
+          description: "Device address"
+    response:
+      type: object
+      properties: {}
+  /service/subscribeNotifications:
+    summary: 'Subscribe to connect/disconnect events'
+    subscribable: true
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: ["subscribe"]
+      properties:
+        subscribe:
+          type: boolean
+          description: "Needs to be set to true"
+    response:
+      type: object
+      properties:
+        listType:
+          type: string
+          enum: ["bonded"]
+        service:
+          type: string
+          enum: ["hid", "audio"]
+          description: "Device service"
+        state:
+          type: string
+          enum: ["connecting", "connected", "disconnecting", "disconnected", "(null)"]
+          description: "Device state"
+        address:
+          type: string
+          description: "Device address"
+        name:
+          type: string
+          description: "Device name"
+  /service/setWoBLE:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/enable:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/connectHID:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/getStates:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/release:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/resetWoBLE:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/createAlert:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/init:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /service/createToast:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/getState:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/setState:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/cancelFindDevices:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/getLinkState:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/resetMagicSearchResult:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/getTrustedDevices:
+    summary: 'Lists trusted devices'
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: ["service"]
+      properties:
+        service:
+          type: string
+          description: "Device type category"
+          enum: ["hid", "audio", "audio_sink", "hid_kbd", "headset", "opc", "ops", "led", "onekey", "heartrate", "all"]
+    response:
+      type: object
+      properties:
+        count:
+          type: number
+          description: "Trusted devices count"
+        device:
+          type: array
+          description: "Devices list"
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "Device name"
+              address:
+                type: string
+                description: "Device address"
+              deviceClass:
+                type: number
+                enum: [5]
+              state:
+                type: string
+                enum: ["connected", "disconnected"]
+  /gap/sendVendorCommand:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/isWiFiOnly:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/setTraceLevel:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/isRadioOn:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/isVisible:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/setScanState:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/getLocalDeviceVersion:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/launchAdapterFwUpdate:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/findDevices:
+    summary: 'Scan for devices'
+    subscribable: true
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties:
+        deviceClass:
+          type: number
+          enum: [4, 5, 6]
+          description: "Device class to search for - 4 = audio, 5 = hid, 6 = POPO (photo printer)"
+        seconds:
+          type: number
+          description: "Scan duration"
+    response:
+      type: object
+      properties:
+        scanState:
+          type: string
+          enum: ["device", "done"]
+        device:
+          type: object
+          description: "Found device description, only when scanState = device"
+          properties:
+            name:
+              type: string
+              description: "Device name"
+            address:
+              type: string
+              description: "Device address"
+            deviceClass:
+              type: number
+              description: "Device class, see above"
+            rssi:
+              type: number
+              description: "Device RSSI/link quality"
+
+  /gap/removeTrustedDevice:
+    summary: 'Removes trusted/bonded device'
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: ["service", "address"]
+      properties:
+        service:
+          type: string
+          enum: ["audio","hid"]
+          description: "Service type to disconnect"
+        address:
+          type: string
+          description: "Device address"
+    response:
+      type: object
+      properties: {}
+  /gap/btResumeDone:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /gap/getMagicSearchResult:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audioSink/close:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audioSink/acceptConnReq:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audioSink/customCmd:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audioSink/open:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/enableSoundOutRedirect:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/setFeedingInterval:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/setVolume:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/yesReconn:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/play:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/getVolumeIconType:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/retryConn:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/enable:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/getPlayerStatus:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/setPlay:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/changeToTVSpeaker:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/getSoundOutRedirectState:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/stop:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/reconfigCodec:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/noReconn:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/retryDisc:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/getPlayerList:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/setVolumeIconType:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/pause:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - devices
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/sendButton:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+  /audio/enableMusicInfo:
+    summary: ''
+    subscribable: false
+    requiredPermissions:
+    - private
+    request:
+      type: object
+      required: []
+      properties: {}
+    response:
+      type: object
+      properties: {}
+

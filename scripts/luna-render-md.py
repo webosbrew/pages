@@ -29,7 +29,7 @@ def render_schema(schema):
             enum_info = " (supported values: {})".format(
                 ", ".join(f"`{e}`" for e in prop["enum"])
             )
-        req = "**" if prop["name"] in schema["required"] else ""
+        req = "**" if prop["name"] in schema.get("required", []) else ""
         print(
             f" * [`{prop['type']}`] {req}`{prop['name']}`{req} - {description}{enum_info}"
         )
@@ -43,6 +43,10 @@ with open(sys.argv[1]) as fd:
 
     print(f"Title: Luna service - {data['service']}")
     print()
+
+    if data.get("summary"):
+        print(data["summary"])
+
     print("# Methods")
     for method_name, method in data["paths"].items():
         if not method.get("summary"):
