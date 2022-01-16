@@ -2,6 +2,7 @@ Title: Luna service bus
 
 # Undocumented services
 * [`eim`]({filename}/pages/luna/eim.md) - External Input Manager
+* [`bluetooth`]({filename}/pages/luna/bluetooth.md) - Bluetooth Manager
 
 # Debugging
 `ls-monitor` and `luna-send` can be used for various debugging purposes:
