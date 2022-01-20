@@ -14,7 +14,7 @@ In order to disable log whitelisting certain luna calls need to be executed.
 luna-send -n 1 -f luna://com.webos.service.config/setConfigs '{"configs": {"system.collectDevLogs": true}}'
 
 # webOS 3.x and older
-luna-send -n 1 -f 'luna://com.webos.pmlogd/setdevlogstatus' '{"recordDevLogs":false}'
+luna-send -n 1 -f 'luna://com.webos.pmlogd/setdevlogstatus' '{"recordDevLogs":true}'
 ```
 
 Then log levels can be adjusted using `PmLogCtl`:
@@ -27,8 +27,16 @@ PmLogCtl show
 PmLogCtl set WAM debug
 
 # Bulk adjust
-PmLogCtl '*' none
+PmLogCtl set '*' none
 ```
+
+Then logs can be viewed by running:
+```sh
+tail -F /var/log/messages
+```
+
+Keep in mind `/var/log/messages` file is rotated, thus setting too high logging
+level may cause it to drop messages (even when using `-F` flag)
 
 ## PmLogLib stub
 Alternatively (on non-rooted devices) a
