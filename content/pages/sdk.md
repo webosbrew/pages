@@ -35,7 +35,7 @@ ares-setup-device -a webos -i "username=root" -i "privatekey=id_rsa" -i "passphr
 
 ## Configuring VSCode Extension
 1. Load https://marketplace.visualstudio.com/items?itemName=webOSOSESDK.webosose into your VSCode
-2. The Extension will prompt you to install needed npm Packages. This will probably fail depending on your VSCode setup due to permissions - run the commands manually in a root shell (```npm install webosose/ares-cli```)
+2. The Extension will prompt you to install needed npm Packages. This will probably fail depending on your VSCode setup due to permissions - run the commands manually in a root shell (```npm install @webosose/ares-cli```)
 3. Setup Key auth with your TV
 4. run ``` ares-setup-device ``` and use your VSCode terminals ssh private key (`id_rsa`)
 5. refresh the Known Devices Tab, you should see your new TV listed.
