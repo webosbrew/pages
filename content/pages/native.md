@@ -11,5 +11,6 @@ Native APIs are reverse engineered here: [webosbrew/tv-native-apis](https://gith
 Some common Linux-world libraries and services are present on webOS devices:
 
  * SDL
+ * OpenGL ES
  * Qt/QML
  * PulseAudio
