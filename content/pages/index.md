@@ -60,6 +60,8 @@ by default.
 * [Configuring SDK]({filename}/pages/sdk.md)
 * [Native development]({filename}/pages/native.md)
 * [Web development]({filename}/pages/web.md)
+* Hacking
+    * [Filesystem overlays]({filename}/pages/hacking/overlays.md)
 * Common
     * [Logging]({filename}/pages/logging.md)
     * [Luna service bus]({filename}/pages/luna.md)
