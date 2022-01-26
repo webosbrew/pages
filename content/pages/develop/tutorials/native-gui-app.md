@@ -1,4 +1,4 @@
-Title: Develop Native GUI Application save_as: develop/tutorials/native-gui-app.html
+Title: Develop Native GUI Application
 save_as: develop/tutorials/native-gui-app.html
 
 Native system apps in webOS Uses Qt, but Qt version varies between system versions.
