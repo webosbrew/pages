@@ -62,8 +62,8 @@ by default.
 * [Web development]({filename}/pages/web.md)
 * Hacking
     * [Filesystem overlays]({filename}/pages/hacking/overlays.md)
-    * [Glossary]({filename}/pages/hacking/glossary.md)
     * [Hidden system settings]({filename}/pages/hacking/settings.md)
+    * [Glossary]({filename}/pages/hacking/glossary.md)
 * Common
     * [Logging]({filename}/pages/logging.md)
     * [Luna service bus]({filename}/pages/luna.md)

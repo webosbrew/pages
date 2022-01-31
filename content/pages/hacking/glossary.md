@@ -33,7 +33,9 @@ Services
 : Services are processes running "in the background" exposing methods/endpoints
 on Luna bus. The only officially supported technology for third-party app
 services development in webOS [is
-NodeJS](https://webostv.developer.lge.com/develop/js-services/webos-tv-service-basics/).
+NodeJS](https://webostv.developer.lge.com/develop/js-services/webos-tv-service-basics/),
+however unofficially, with several quirks, [native code can be used as
+well]({filename}/pages/native.md#native-services).
 
 Elevated Service / Service Elevation
 : A non-system (homebrew) service running as root, with Luna bus permission
@@ -59,10 +61,10 @@ comes from main NetCast binary. Since webOS 5.x all `tvservice` functionality
 has been extracted into separate services. (eg. `micomservice`)
 
 SDP / `lgtvsdp.com`
-: LG "smart services" backend API, responsible for Content Store communication.
-This is also a service that is used for TV time synchronisation. Various mock
-implementations of that service has been released to keep time synchronization
-working properly:
+: LG Service Delivery Platform - "smart services" backend API, responsible for
+Content Store communication among others. This is also a service that is used
+for TV time synchronisation. Various mock implementations of that service has
+been released to keep time synchronization working properly:
 [wisq/lgtv-sdp](https://github.com/wisq/lgtv-sdp),
 [zopieux/lgtv-tbc](https://github.com/zopieux/lgtv-tbc)...
 
