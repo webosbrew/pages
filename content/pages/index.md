@@ -63,6 +63,7 @@ by default.
 * Hacking
     * [Filesystem overlays]({filename}/pages/hacking/overlays.md)
     * [Glossary]({filename}/pages/hacking/glossary.md)
+    * [Hidden system settings]({filename}/pages/hacking/settings.md)
 * Common
     * [Logging]({filename}/pages/logging.md)
     * [Luna service bus]({filename}/pages/luna.md)
