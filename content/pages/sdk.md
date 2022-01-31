@@ -8,6 +8,10 @@ Recommended tooling for webOS TV development is
 package. It provides all the basic tools without needing to install them
 globally.
 
+**If your TV is rooted** You *shall not* use "Developer Mode" app - all of its
+functionality is accessible via root SSH server exposed by Homebrew Channel, and
+installing it will probably break root startup sequence.
+
 ## Configuring @webosose/ares-cli with Developer Mode App
 This is partially based on: https://webostv.developer.lge.com/develop/app-test/using-devmode-app/
 
