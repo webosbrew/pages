@@ -33,3 +33,16 @@ In order to properly launch a native application in a root shell to see its
 # Replace my.app.id with your app id and adjust main binary path accordingly
 XDG_RUNTIME_DIR=/tmp/xdg /usr/bin/jailer -t native_devmode -i my.app.id -p /media/developer/apps/usr/palm/applications/my.app.id /media/developer/apps/usr/palm/applications/my.app.id/main-binary-name '{"@system_native_app":true,"nid":"my.app.id"}' --my-extra-options
 ```
+
+## Native Services
+While not officially supported, Native Services can be implemented in homebrew
+apps. For docs on how to achieve this check [webOS OSE documentation](https://www.webosose.org/docs/tutorials/native-services/developing-external-native-services/).
+
+**Native services are only properly supported since webOS 4.x.** On earlier
+versions service premissions are not set up properly, leading to applications
+being unable to contact the service. (in these cases a service is started up,
+but no method can be called) On these platforms Homebrew Channel
+`elevate-service` script can be used to fixup these permissions.
+
+For an example homebrew application that contains a Native Service check
+[PicCap](https://github.com/TBSniller/piccap)/[hyperion-webos](https://github.com/webosbrew/hyperion-webos).
