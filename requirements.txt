@@ -1,5 +1,6 @@
 pelican~=4.7
 pelican-webassets~=2.0.0
+pelican-search~=1.0.2
 markdown~=3.3.6
 ghp-import~=2.0
 webassets~=2.0

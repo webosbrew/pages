@@ -61,3 +61,6 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 COPYRIGHT_YEAR = datetime.date.today().year
+
+ENABLE_SEARCH = True
+SEARCH_HTML_SELECTOR = "div.main"
