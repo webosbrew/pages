@@ -17,3 +17,13 @@ Registers an application as an input. `"supportGIP": true` needs to be set in ap
 ### Response
  * *No information...*
 
+## `luna://com.webos.service.eim/deleteDevice`
+Removes an application from inputs list.
+
+**Required permissions**: `devices`, <u>`public`</u>, `private`
+### Request
+ * [`string`] **`appId`** - Application to be removed from inputs list.
+
+### Response
+ * *No information...*
+

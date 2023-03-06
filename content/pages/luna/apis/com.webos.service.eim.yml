@@ -187,7 +187,7 @@ paths:
       type: object
       properties: {}
   /deleteDevice:
-    summary: ''
+    summary: 'Removes an application from inputs list.'
     subscribable: false
     requiredPermissions:
     - devices
@@ -195,8 +195,11 @@ paths:
     - private
     request:
       type: object
-      required: []
-      properties: {}
+      required: ["appId"]
+      properties:
+        appId:
+          type: string
+          description: "Application to be removed from inputs list."
     response:
       type: object
       properties: {}
