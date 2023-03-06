@@ -44,8 +44,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 MENUITEMS = (
-    ('Applications', 'https://repo.webosbrew.org'),
-    ('Develop', '/develop'),
+    ("Applications", "https://repo.webosbrew.org"),
+    ("Develop", "/develop/"),
 )
 
 LINKS = (
@@ -56,6 +56,11 @@ LINKS = (
 )
 
 DEFAULT_PAGINATION = 10
+
+PATH_METADATA = "pages/(?P<path_no_ext>.*)\..*"
+
+ARTICLE_URL = PAGE_URL = "{path_no_ext}/"
+ARTICLE_SAVE_AS = PAGE_SAVE_AS = "{path_no_ext}/index.html"
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
