@@ -31,4 +31,4 @@ with open(sys.argv[1]) as fd:
                     "request": {"type": "object", "required": [], "properties": {}},
                     "response": {"type": "object", "properties": {}},
                 }
-        print(yaml.dump(svc, sort_keys=False))
+        print(yaml.dump(svc, sort_keys=False, Dumper=yaml.Dumper))
