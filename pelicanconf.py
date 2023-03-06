@@ -68,4 +68,4 @@ ARTICLE_SAVE_AS = PAGE_SAVE_AS = "{path_no_ext}/index.html"
 COPYRIGHT_YEAR = datetime.date.today().year
 
 ENABLE_SEARCH = True
-SEARCH_HTML_SELECTOR = "div.main"
+SEARCH_HTML_SELECTOR = "main"
