@@ -3,8 +3,8 @@ Title: appinfo.json
 # Official documentation
 
  * [webOS
-   TV](https://webostv.developer.lge.com/develop/app-developer-guide/app-metadata/)
- * [webOS OSE](https://www.webosose.org/docs/guides/development/configuration-files/appinfo-json/)
+   TV](https://webostv.developer.lge.com/develop/references/appinfo-json) ([archive.org](https://web.archive.org/web/20230608040557/https://webostv.developer.lge.com/develop/references/appinfo-json))
+ * [webOS OSE](https://www.webosose.org/docs/guides/development/configuration-files/appinfo-json/) ([archive.org](https://web.archive.org/web/20230510171556/https://www.webosose.org/docs/guides/development/configuration-files/appinfo-json/))
 
 # Undocumented options
 ## `dialAppName` [string]
