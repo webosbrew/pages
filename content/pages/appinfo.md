@@ -69,6 +69,11 @@ WebApps running as `netcast` have some of their APIs limited:
 * `window.PalmSystem.launchParams` equivalent is exposed on
   `window.launchParams` instead
 
+## `inspectable` [boolean]
+Default: `true` for Developer Mode apps; `false` otherwise
+
+Allows this app to be debugged using Chrome DevTools (`chrome://inspect`). Connect on port 9998 for non-system apps.
+
 ## `vendorExtensions` [object]
 
 ### `vendorExtensions.userAgent` [string]
