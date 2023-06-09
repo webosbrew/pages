@@ -6,6 +6,9 @@ Title: appinfo.json
    TV](https://webostv.developer.lge.com/develop/references/appinfo-json) ([archive.org](https://web.archive.org/web/20230608040557/https://webostv.developer.lge.com/develop/references/appinfo-json))
  * [webOS OSE](https://www.webosose.org/docs/guides/development/configuration-files/appinfo-json/) ([archive.org](https://web.archive.org/web/20230510171556/https://www.webosose.org/docs/guides/development/configuration-files/appinfo-json/))
 
+# Caching
+SAM may cache the contents of `appinfo.json` at boot, and it is not possible to modify built-in apps before this occurs. Therefore, if you want to modify `appinfo.json` for built-in apps, you will likely have to restart `sam` for changes to take effect.
+
 # Undocumented options
 ## `dialAppName` [string]
 Default: none
