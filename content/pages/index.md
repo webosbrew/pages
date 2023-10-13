@@ -8,7 +8,7 @@ hide_title: True
 
 Welcome to webOS Homebrew Project!
 
-We are a community surrounded around homebrew (unofficial software)
+We are a community centered around homebrew (unofficial software)
 development for LG webOS Smart TV platform.
 
 ## What Does It Do?
@@ -29,7 +29,7 @@ Our main points of interest are:
     - ...and [more](https://github.com/webosbrew)
 
 Our community has some overlap with [RootMyTV](https://rootmy.tv) and [OpenLGTV](https://openlgtv.github.io) teams, but
-each has its distinct purpose. (root access exploitation and low level hardware reversing respectively)
+each has its distinct purpose (root access exploitation and low level hardware reversing, respectively).
 
 Our main points of contact are [#homebrew channel on OpenLGTV Discord](https://discord.gg/nKQW6FPWeM)
 and [#openlgtv:netserve.live](https://matrix.to/#/#openlgtv:netserve.live) Matrix channel.
@@ -37,22 +37,22 @@ and [#openlgtv:netserve.live](https://matrix.to/#/#openlgtv:netserve.live) Matri
 ## Getting Started
 
 Currently, the easiest method of enjoying homebrew software on webOS is using Homebrew Channel, which is automatically
-installed when using [RootMyTV](https://rootmy.tv)
+installed when using the [RootMyTV](https://rootmy.tv)
 exploit. [Homebrew Channel](https://github.com/webosbrew/webos-homebrew-channel)
 is a user friendly unofficial "application store".
 
-Alternative method, if your TV is not vulnerable to RootMyTV exploit chain, is
-to [enable Developer Mode](https://webostv.developer.lge.com/develop/app-test/using-devmode-app/) on a TV and then use
+If your TV is not vulnerable to the RootMyTV exploit chain, you can still
+[enable Developer Mode](https://webostv.developer.lge.com/develop/app-test/using-devmode-app/) on a TV and then use
 our [Device Manager app](https://github.com/webosbrew/dev-manager-desktop).
 
-Keep in mind this has a downside of requiring "Developer Mode Session" renewal in "Developer Mode" every 48 hours.
-Alternatively, if you are technically profficient, machine in a local network can periodically refresh the token for you
+Keep in mind this has the downside of requiring "Developer Mode Session" renewal in the "Developer Mode" app every 1000 hours.
+Alternatively, if you are technically profficient, a machine in a local network can periodically refresh the token for you
 using a script [like one of these](https://github.com/webosbrew/dev-goodies/blob/main/reset-devmode-timer.sh).
 
 ## Find Apps
 
-Repository of webOS homebrew applications can be viewed on the web on
-[https://repo.webosbrew.org](https://repo.webosbrew.org). The same repository is also accessible in Homebrew Channel app
+The repository of webOS homebrew applications can be viewed on the web at
+[repo.webosbrew.org](https://repo.webosbrew.org). The same repository is also accessible in the Homebrew Channel app
 by default.
 
 ## For Developers
