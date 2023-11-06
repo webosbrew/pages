@@ -11,9 +11,12 @@ Stream PC games with Moonlight? That doesn't require root either.
 
 For many usages, like installing some useful homebrews, root is **NOT** required.
 Using developer mode is enough for most of the time, and not hard to setup either.
+It requires an account though, and you'll have to renew the developer mode every 
+999 hours.
 
 ### Benefits of Rooting
 
+* No developer mode needed anymore - No need to worry about dev mode timer
 * Gain more control of the TV - block ads and auto-updates
 * More modifications - Custom wallpaper, screensaver, [Ambient Lighting with Hyperion](https://github.com/hyperion-project/hyperion.ng), etc.
 * Explore the whole Linux-based webOS - useful for researching
