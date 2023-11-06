@@ -39,7 +39,7 @@ def render_schema(schema):
 
 
 with open(sys.argv[1]) as fd:
-    data = yaml.load(fd)
+    data = yaml.load(fd, Loader=yaml.Loader)
 
     print(f"Title: Luna service - {data['service']}")
     print()

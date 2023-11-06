@@ -1,6 +1,7 @@
 Title: Home
 URL:
 save_as: index.html
+url: /
 hide_title: True
 
 <!-- Use HTML tag to skip permalink -->
