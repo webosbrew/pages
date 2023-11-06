@@ -30,12 +30,12 @@ Using [dev-manager-desktop](https://github.com/webosbrew/dev-manager-desktop) ma
 
 ![Install from webOS Homebrew repo](https://user-images.githubusercontent.com/830358/215523117-0fdbde24-a503-4eed-8e2f-50a3486ce7f7.png)
 
-## Let's Get Root Anyway!
+## Let Me Get Root Anyway!
 
 As of November 2023, LG had released multiple patches against the vulnerbilities we found.
 Depending on the firmware and model, there are multiple approaches to root the TV.
 
-[RootMy.TV](https://rootmy.tv/) - For webOS 3 and up, but very likely patched
-[crashd](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f) - For webOS 4 and up, partially patched
-[GetMeIn](https://xdaforums.com/t/getmein-one-time-rooting-jailbreaking-tool-for-webos-lg-tvs.3887904/) - For webOS 3.4 and below on certain models
-[Hardware Modification](https://gist.github.com/throwaway96/827ff726981cc2cbc46a22a2ad7337a1) - Requires opening up the TV
+- [RootMy.TV](https://rootmy.tv/) - For webOS 3 and up, but very likely patched
+- [crashd](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f) - For webOS 4 and up, partially patched
+- [GetMeIn](https://xdaforums.com/t/getmein-one-time-rooting-jailbreaking-tool-for-webos-lg-tvs.3887904/) - For webOS 3.4 and below on certain models
+- [Hardware Modification](https://gist.github.com/throwaway96/827ff726981cc2cbc46a22a2ad7337a1) - Requires opening up the TV
