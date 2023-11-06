@@ -10,7 +10,7 @@ Use Kodi? That doesn't require root.
 Stream PC games with Moonlight? That doesn't require root either.
 
 For many usages, like installing some useful homebrews, root is **NOT** required.
-Using developer mode is enough, and won't have any risk bricking the TV, or lose warranty.
+Using developer mode is enough for most of the time, and not hard to setup either.
 
 ### Benefits of Rooting
 
