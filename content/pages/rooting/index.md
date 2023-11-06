@@ -1,42 +1,53 @@
-Title: Rooting the TV
+Title: Rooting Your webOS TV
 save_as: rooting/index.html
 
-## Should I Root Or Not?
+## Should I Root or Not?
 
-Before rooting the TV, please think about what would you like to do with a rooted TV.
+Before rooting your TV, please think about what you would like to do with a rooted TV.
 
 Use Kodi? That doesn't require root.
 
 Stream PC games with Moonlight? That doesn't require root either.
 
-For many usages, like installing some useful homebrews, root is **NOT** required.
-Using developer mode is enough for most of the time, and not hard to setup either.
-It requires an account though, and you'll have to renew the developer mode every 
-999 hours.
+For many uses, like installing some useful homebrew applications, root is **NOT** required.
+Using developer mode is enough most of the time and not hard to set up either.
+It requires an account though, and you'll have to renew the developer mode every
+1000 hours.
+
+However, an ambilight setup with
+[PicCap](https://github.com/TBSniller/piccap)/[Hyperion](https://github.com/webosbrew/hyperion-webos)/[HyperHDR](https://github.com/webosbrew/hyperhdr-webos-loader)
+*will* require root.
+
+Remapping remote control buttons with [lginputhook](https://github.com/Simon34545/lginputhook) requires root.
+
+Keeping Kodi's `.kodi` directory on a USB drive also requires root.
 
 ### Benefits of Rooting
 
-* No developer mode needed anymore - No need to worry about dev mode timer
-* Gain more control of the TV - block ads and auto-updates
-* More modifications - Custom wallpaper, screensaver, [Ambient Lighting with Hyperion](https://github.com/hyperion-project/hyperion.ng), etc.
-* Explore the whole Linux-based webOS - useful for researching
+* No developer mode needed anymore - No need to worry about the dev mode timer or an LG account
+* Gain more control over your TV - Block ads and auto-updates
+* Increase privacy - Disable telemetry
+* More modifications - Custom wallpaper, screensaver, ambient lighting, etc.
+* Access webOS internals - Useful for researching and exploring the Linux system underlying webOS
 
 ### Caveats of Rooting
 
-* Methods may get patched by LG - You'll lose homebrews and mods installed
-* Rooting is safe while [messing with the system](https://rootmy.tv/warning) is not - You could brick it if you don't have proper knowledge
+* Methods may get patched by LG - If you apply firmware updates, you may lose any homebrew apps and mods you've installed
+* Rooting is safe, but reckless changes are not - You could brick your TV if you don't have proper knowledge and ignore **[warnings](https://rootmy.tv/warning)**
 
-## How to Use Homebrews Without Root?
+## How Do I Use Homebrew Apps Without Root?
 
 Using [dev-manager-desktop](https://github.com/webosbrew/dev-manager-desktop) makes this pretty easy.
 
-![Install from webOS Homebrew repo](https://user-images.githubusercontent.com/830358/215523117-0fdbde24-a503-4eed-8e2f-50a3486ce7f7.png)
+<img src="https://user-images.githubusercontent.com/830358/215523117-0fdbde24-a503-4eed-8e2f-50a3486ce7f7.png" alt="Install from webOS Homebrew repo" title="Install from webOS Homebrew repo" width="70%">
 
-## Let Me Get Root Anyway!
+## I Want Root Anyway!
 
-As of November 2023, LG had released multiple patches against the vulnerbilities we found.
-Depending on the firmware and model, there are multiple approaches to root the TV.
+As of November 2023, LG has released multiple patches for the vulnerbilities we found.
+Depending on the firmware and model, there are multiple approaches to rooting a webOS TV.
 
-- [RootMy.TV](https://rootmy.tv/) - For webOS 3 and up, but very likely patched
-- [crashd](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f) - For webOS 4 and up, partially patched
-- [Hardware Modification](https://gist.github.com/throwaway96/827ff726981cc2cbc46a22a2ad7337a1) - Requires opening up the TV
+- [RootMy.TV](https://rootmy.tv/) - For webOS 3.4 and up, but very likely patched
+- [crashd](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f) - For webOS 4.0 and up; partially patched, but workarounds available
+- [DEBUG via
+  NVM](https://gist.github.com/throwaway96/827ff726981cc2cbc46a22a2ad7337a1) - Works on all webOS versions prior to 4.0 (plus NetCast/GP) but requires opening up the TV (no permanent hardware modifications)
+- GetMeIn - May work on webOS up to 3.4 on certain models, but don't use the original binary from the XDA thread
