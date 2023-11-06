@@ -2,13 +2,25 @@
 # -*- coding: utf-8 -*- #
 import datetime
 
+import pelican.themes.webosbrew
+from pelican.plugins import webassets
+from webassets.cache import MemoryCache
+
 AUTHOR = 'webosbrew.org'
 SITENAME = 'webOS Homebrew Project'
 SITEURL = ''
 SOURCEURL = 'https://github.com/webosbrew/webosbrew.github.io/blob/main/content'
 
 THEME = 'webosbrew'
-WEBASSETS_SOURCE_PATHS = ['static']
+THEME_STATIC_PATHS = [pelican.themes.webosbrew.static_dir()]
+WEBASSETS_SOURCE_PATHS = [pelican.themes.webosbrew.scss_dir()]
+
+PLUGINS = [webassets]
+
+WEBASSETS_CONFIG = [
+    ("CACHE", MemoryCache(1024)),
+    ("PYSCSS_LOAD_PATHS", [pelican.themes.webosbrew.scss_dir()]),
+]
 
 PATH = 'content'
 
