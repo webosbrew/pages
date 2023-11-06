@@ -20,9 +20,8 @@ Using developer mode is enough, and won't have any risk bricking the TV, or lose
 
 ### Caveats of Rooting
 
-* May get patched by LG - You'll lose homebrews and mods installed
-* May void the warranty - LG seems to have ways to know if your TV's rooted
-* May brick the TV - If you [mess with the system as we warned](https://rootmy.tv/warning)
+* Methods may get patched by LG - You'll lose homebrews and mods installed
+* Rooting is safe while [messing with the system](https://rootmy.tv/warning) is not - You could brick it if you don't have proper knowledge
 
 ## How to Use Homebrews Without Root?
 
@@ -37,5 +36,4 @@ Depending on the firmware and model, there are multiple approaches to root the T
 
 - [RootMy.TV](https://rootmy.tv/) - For webOS 3 and up, but very likely patched
 - [crashd](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f) - For webOS 4 and up, partially patched
-- [GetMeIn](https://xdaforums.com/t/getmein-one-time-rooting-jailbreaking-tool-for-webos-lg-tvs.3887904/) - For webOS 3.4 and below on certain models
 - [Hardware Modification](https://gist.github.com/throwaway96/827ff726981cc2cbc46a22a2ad7337a1) - Requires opening up the TV
