@@ -13,7 +13,7 @@ functionality is accessible via root SSH server exposed by Homebrew Channel, and
 installing it will probably break root startup sequence.
 
 ## Configuring @webosose/ares-cli with Developer Mode App
-This is partially based on: https://webostv.developer.lge.com/develop/app-test/using-devmode-app/
+This is partially based on: https://webostv.developer.lge.com/develop/getting-started/developer-mode-app
 
 1. Install Developer Mode app from Content Store
 2. Enable developer mode, enable keyserver

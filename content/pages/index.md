@@ -42,7 +42,7 @@ exploit. [Homebrew Channel](https://github.com/webosbrew/webos-homebrew-channel)
 is a user friendly unofficial "application store".
 
 If your TV is not vulnerable to the RootMyTV exploit chain, you can still
-[enable Developer Mode](https://webostv.developer.lge.com/develop/app-test/using-devmode-app/) on a TV and then use
+[enable Developer Mode](https://webostv.developer.lge.com/develop/getting-started/developer-mode-app) on a TV and then use
 our [Device Manager app](https://github.com/webosbrew/dev-manager-desktop).
 
 Keep in mind this has the downside of requiring "Developer Mode Session" renewal in the "Developer Mode" app every 1000 hours.
