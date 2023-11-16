@@ -15,7 +15,7 @@ development for LG webOS Smart TV platform.
 
 Our main points of interest are:
 
-* Building [an unofficial native app toolchain](https://github.com/webosbrew/native-toolchain)
+* Building an [unofficial native toolchain](https://github.com/webosbrew/native-toolchain)
 * Reverse engineering and documenting [native system APIs](https://github.com/webosbrew/tv-native-apis) and other
   undocumented features
 * Maintaining an independent [repository of unofficial applications](https://github.com/webosbrew/apps-repo) and
@@ -31,8 +31,8 @@ Our main points of interest are:
 Our community has some overlap with [RootMyTV](https://rootmy.tv) and [OpenLGTV](https://openlgtv.github.io) teams, but
 each has its distinct purpose (root access exploitation and low level hardware reversing, respectively).
 
-Our main points of contact are [#homebrew channel on OpenLGTV Discord](https://discord.gg/nKQW6FPWeM)
-and [#openlgtv:netserve.live](https://matrix.to/#/#openlgtv:netserve.live) Matrix channel.
+Our main points of contact are the [#homebrew channel on OpenLGTV Discord](https://discord.gg/nKQW6FPWeM)
+and the [#openlgtv:netserve.live](https://matrix.to/#/#openlgtv:netserve.live) Matrix channel.
 
 ## Getting Started
 
@@ -46,8 +46,9 @@ If your TV is not vulnerable to the RootMyTV exploit chain, you can still
 our [Device Manager app](https://github.com/webosbrew/dev-manager-desktop).
 
 Keep in mind this has the downside of requiring "Developer Mode Session" renewal in the "Developer Mode" app every 1000 hours.
-Alternatively, if you are technically profficient, a machine in a local network can periodically refresh the token for you
-using a script [like one of these](https://github.com/webosbrew/dev-goodies/blob/main/reset-devmode-timer.sh).
+Alternatively, if you are technically proficient, you can have a machine on your
+local network periodically refresh the token for you
+using a script like [this one](https://github.com/webosbrew/dev-goodies/blob/main/reset-devmode-timer.sh).
 
 ## Find Apps
 
@@ -57,7 +58,7 @@ by default.
 
 ## For Developers
 
-* [Configuring SDK]({filename}/pages/sdk.md)
+* [SDK configuration]({filename}/pages/sdk.md)
 * [Native development]({filename}/pages/native.md)
 * [Web development]({filename}/pages/web.md)
 * Hacking

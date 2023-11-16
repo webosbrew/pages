@@ -1,22 +1,22 @@
-Title: Configuring SDK
+Title: SDK configuration
 status: hidden
 
 # Development TV setup
 
-Recommended tooling for webOS TV development is
+The recommended tooling for webOS TV development is
 [@webosose/ares-cli](https://www.npmjs.com/package/@webosose/ares-cli) NPM
 package. It provides all the basic tools without needing to install them
 globally.
 
-**If your TV is rooted** You *shall not* use "Developer Mode" app - all of its
-functionality is accessible via root SSH server exposed by Homebrew Channel, and
-installing it will probably break root startup sequence.
+**If your TV is rooted** you *must not* use LG's "Developer Mode" app; installing it
+will probably break your system, potentially necessitating a factory reset. All of its
+functionality (e.g., SSH access) is replaced by Homebrew Channel.
 
 ## Configuring @webosose/ares-cli with Developer Mode App
-This is partially based on: https://webostv.developer.lge.com/develop/getting-started/developer-mode-app
+This is partially based on [LG's instructions](https://webostv.developer.lge.com/develop/getting-started/developer-mode-app).
 
 1. Install Developer Mode app from Content Store
-2. Enable developer mode, enable keyserver
+2. Enable developer mode; enable keyserver
 3. Download TV's private key: `http://TV_IP:9991/webos_rsa` and save under `$HOME/.ssh`
 4. As with any SSH key, restrict its access rights: `chmod 600 ~/.ssh/webos_rsa`
 5. You can test the key with: `ssh-keygen -y -P "PASSPHRASE" -f ~/.ssh/webos_rsa`
@@ -37,7 +37,7 @@ ares-setup-device -a webos -i "username=root" -i "privatekey=id_rsa" -i "passphr
 
 **Note:** @webosose/ares-cli doesn't need to be installed globally - you can use a package installed in a local project directory by just prefixing above commands with local path, like so: `node_modules/.bin/ares-setup-device ...`
 
-## Configuring VSCode Extension
+## Configuring VS Code Extension
 1. Load https://marketplace.visualstudio.com/items?itemName=webOSOSESDK.webosose into your VSCode
 2. The Extension will prompt you to install needed npm Packages. This will probably fail depending on your VSCode setup due to permissions - run the commands manually in a root shell (```npm install @webosose/ares-cli```)
 3. Setup Key auth with your TV
