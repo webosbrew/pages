@@ -77,6 +77,14 @@ Default: `true` for Developer Mode apps; `false` otherwise
 
 Allows this app to be debugged using Chrome DevTools (`chrome://inspect`). Connect on port 9998 for non-system apps.
 
+## `useCORSWhitelist` [string]
+Specifies the name of a JSON file containing a
+[CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+whitelist configuration. A matching signature file (with the same filename
+followed by `.sig`) is required. The signature is Base64-encoded, with the
+underlying binary data being 256 bytes long. The signature algorithm is
+currently unknown.
+
 ## `vendorExtensions` [object]
 
 ### `vendorExtensions.userAgent` [string]
