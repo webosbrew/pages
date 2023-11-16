@@ -29,6 +29,15 @@ Option 3 works fine, but code execution in the "Console" tab does not work and t
 preview window seems corrupted. This also may sometimes trigger a WAM crash for
 unknown reasons.
 
+## Chromium versions
+Some of the issues encountered using DevTools on older webOS versions may be
+resolved by using an older release of Chromium. Specifically, according to
+[LG's App Debugging documentation](https://webostv.developer.lge.com/develop/getting-started/app-debugging),
+the supported versions are:
+* webOS 1&ndash;3: Chrome 38
+* webOS 4&ndash;5: Chrome 68
+* webOS 6+: latest version
+
 # Undocumented features
 
 ## Input/TV embedding
@@ -55,3 +64,15 @@ in app webviews / frames, including frames in origins outside of app root.
 
 Example application that uses this:
 [webosbrew/youtube-webos](https://github.com/webosbrew/youtube-webos)
+
+## Inspecting non-developer apps
+Apps installed from the Content Store (generally found under `/media/cryptofs`)
+are not inspectable by default. You can make an app inspectable by adding
+`"inspectable":true` to its `appinfo.json`.
+
+## Inspecting system apps
+It is possible to inspect system apps (i.e., those found in
+`/usr/palm/applications`) on port 9999. However, this is not enabled by
+default. While creating the file `/var/luna/preferences/debug_system_apps`
+should enable it, our current method of maintaining root access creates issues
+that require additional workarounds.
