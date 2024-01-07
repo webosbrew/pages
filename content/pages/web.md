@@ -33,10 +33,26 @@ unknown reasons.
 Some of the issues encountered using DevTools on older webOS versions may be
 resolved by using an older release of Chromium. Specifically, according to
 [LG's App Debugging documentation](https://webostv.developer.lge.com/develop/getting-started/app-debugging),
-the supported versions are:
+the supported versions are:  
 * webOS 1&ndash;3: Chrome 38
 * webOS 4&ndash;5: Chrome 68
 * webOS 6+: latest version
+
+The LG documentation links to these Chrome builds:  
+* Chrome 38
+  * [Windows](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win/290006/)
+    ([archived `chrome-win32.zip`](https://web.archive.org/web/20240107004449/https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F290006%2Fchrome-win32.zip?generation=1408138291841000&alt=media))
+  * [macOS](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/306948/)
+    ([archived `chrome-mac.zip`](https://web.archive.org/web/20240107004731/https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F306948%2Fchrome-mac.zip?generation=1417744721002000&alt=media))
+  * [Linux (64-bit)](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/320008/)
+    ([archived `chrome-linux.zip`](https://web.archive.org/web/20240107004029/https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2F320008%2Fchrome-linux.zip?generation=1426035118231000&alt=media))
+* Chrome 68
+  * [Windows](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win/561747/)
+    ([archived `chrome-win32.zip`](https://web.archive.org/web/20240107003242/https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F561747%2Fchrome-win32.zip?generation=1527218007950356&alt=media))
+  * [macOS](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/561749/)
+    ([archived `chrome-mac.zip`](https://web.archive.org/web/20240107004529/https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F561749%2Fchrome-mac.zip?generation=1527219878121130&alt=media))
+  * [Linux (64-bit)](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/561747/)
+    ([archived `chrome-linux.zip`](https://web.archive.org/web/20240107004029/https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2F320008%2Fchrome-linux.zip?generation=1426035118231000&alt=media))
 
 # Undocumented features
 
