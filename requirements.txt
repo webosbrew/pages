@@ -1,6 +1,6 @@
-pelican~=4.8
+pelican~=4.9
 pelican-webassets~=2.0
-markdown~=3.5.1
+markdown~=3.5.2
 ghp-import~=2.0
 webassets~=2.0
 cssmin~=0.2.0

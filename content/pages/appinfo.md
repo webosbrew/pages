@@ -85,6 +85,13 @@ followed by `.sig`) is required. The signature is Base64-encoded, with the
 underlying binary data being 256 bytes long. The signature algorithm is
 currently unknown.
 
+## `cloudgame_active` [boolean]
+Default: `false`
+
+This option allows application to handle game controller input. Since webOS 8.3.0 (FW 03.30.60), game controller input 
+becomes recognized as navigation and volume control. For applications that handle game controller input, this causes
+double input. Setting this option to `true` will disable this behavior.
+
 ## `vendorExtensions` [object]
 
 ### `vendorExtensions.userAgent` [string]
