@@ -31,7 +31,7 @@ Our main points of interest are:
 Our community has some overlap with [RootMyTV](https://rootmy.tv) and [OpenLGTV](https://openlgtv.github.io) teams, but
 each has its distinct purpose (root access exploitation and low level hardware reversing, respectively).
 
-Our main points of contact are the [#homebrew channel on OpenLGTV Discord](https://discord.gg/nKQW6FPWeM)
+Our main points of contact are the [#homebrew channel on OpenLGTV Discord](https://discord.gg/PM7KjPMH8t)
 and the [#openlgtv:netserve.live](https://matrix.to/#/#openlgtv:netserve.live) Matrix channel.
 
 ## Getting Started
