@@ -43,11 +43,12 @@ Using [dev-manager-desktop](https://github.com/webosbrew/dev-manager-desktop) ma
 
 ## I Want Root Anyway!
 
-As of November 2023, LG has released multiple patches for the vulnerbilities we found.
+As of February 2024, LG has released multiple patches for the vulnerabilities we found.
 Depending on the firmware and model, there are multiple approaches to rooting a webOS TV.
 
-- [RootMy.TV](https://rootmy.tv/) - For webOS 3.4 and up, but very likely patched
-- [crashd](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f) - For webOS 4.0 and up; partially patched, but workarounds available
+- [RootMy.TV](https://rootmy.tv/) - For webOS 3.4 and up, but very likely patched (read the [README](https://github.com/RootMyTV/RootMyTV.github.io?tab=readme-ov-file#readme) first!)
+- [crashd](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f) - For webOS 4.0 and up; patches being rolled out
+- [WTA](https://gist.github.com/throwaway96/b171240ef59d7f5fd6fb48fc6dfd2941) - For webOS 5 and up; patches being rolled out
 - [DEBUG via
   NVM](https://gist.github.com/throwaway96/827ff726981cc2cbc46a22a2ad7337a1) - Works on all webOS versions prior to 4.0 (plus NetCast/GP) but requires opening up the TV (no permanent hardware modifications)
 - GetMeIn - May work on webOS up to 3.4 on certain models, but don't use the original binary from the XDA thread
