@@ -7,7 +7,7 @@ Most of webOS filesystem is read-only. All read-only partitions are stored as
 on Android devices.
 
 In order to apply system config-level changes on read-only partitions we need
-to apply these in runtime.
+to apply these at runtime.
 
 ## Replacing files/whole directories
 A simple method of replacing/modifying single files is using `mount --bind`,
@@ -29,8 +29,8 @@ mount --bind /tmp/my-example-directory /etc/ssl/certs
 An example of an app that uses this method is [custom screensaver](https://github.com/webosbrew/custom-screensaver/blob/main/assets/apply.sh).
 
 ## Adding files to an existing directory
-If one needs to add a file into a directory `overlayfs` may be used. Little
-example here will add an additional service to SSAP server:
+If one needs to create a file that doesn't already exist, `overlayfs` may be used. The little
+example here will add an additional service to the SSAP server:
 
 ```sh
 # Create config overrides directory on writable partition
@@ -47,6 +47,11 @@ mount -t overlay overlay -olowerdir=/usr/palm/services/com.webos.service.seconds
 # automatically when killed) - the name changes randomly because of [reasons]
 pkill -9 -f ss.apiadapter ; pkill -9 -f ss.gateway
 ```
+
+See the Linux kernel
+[Overlay Filesystem documentation](https://docs.kernel.org/filesystems/overlayfs.html)
+for more information. Note that `overlayfs` is not available on webOS 1, as the
+kernel is too old.
 
 ## Making a whole directory writable
 It is possible to make a whole directory writable by creating a writable
