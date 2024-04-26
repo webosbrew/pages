@@ -16,7 +16,7 @@ development for LG webOS Smart TV platform.
 Our main points of interest are:
 
 * Building an [unofficial native toolchain](https://github.com/webosbrew/native-toolchain)
-* Reverse engineering and documenting [native system APIs](https://github.com/webosbrew/tv-native-apis) and other
+* Reverse engineering and documenting [native system APIs](https://github.com/webosbrew/webos-userland) and other
   undocumented features
 * Maintaining an independent [repository of unofficial applications](https://github.com/webosbrew/apps-repo) and
   development tools
