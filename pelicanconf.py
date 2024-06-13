@@ -73,3 +73,6 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 COPYRIGHT_YEAR = datetime.date.today().year
+
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}.html'
