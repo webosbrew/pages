@@ -8,7 +8,7 @@ from webassets.cache import MemoryCache
 
 AUTHOR = 'webosbrew.org'
 SITENAME = 'webOS Homebrew Project'
-SITEURL = ''
+SITEURL = 'https://www.webosbrew.org/pages'
 SOURCEURL = 'https://github.com/webosbrew/webosbrew.github.io/blob/main/content'
 
 THEME = 'webosbrew'
