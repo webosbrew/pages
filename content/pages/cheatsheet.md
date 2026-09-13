@@ -43,6 +43,10 @@ luna-send -n 1 'luna://com.webos.settingsservice/setSystemSettings' '{"category"
 luna-send -n 1 -f 'luna://com.webos.service.tv.capture/executeOneShot' '{"path":"/tmp/capture.png","method":"DISPLAY","format":"PNG", "width": 1920, "height": 1080}'
 # Supported formats: BMP, JPG, PNG, RGB, RGBA, YUV422
 # Supported methods: SCREEN/DISPLAY (alias?), SCREEN_WITH_SOURCE_VIDEO, VIDEO, GRAPHIC, SOURCE/SCALER (alias?)
+
+# Launch a server to access the file(s) from a different device
+python3 -m server.http
+# Access over http://tv-ip:8000 then.
 ```
 
 ## Factorywin app (ezAdjust/inStart/inStop)
