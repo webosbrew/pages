@@ -43,6 +43,9 @@ luna-send -n 1 'luna://com.webos.settingsservice/setSystemSettings' '{"category"
 luna-send -n 1 -f 'luna://com.webos.service.tv.capture/executeOneShot' '{"path":"/tmp/capture.png","method":"DISPLAY","format":"PNG", "width": 1920, "height": 1080}'
 # Supported formats: BMP, JPG, PNG, RGB, RGBA, YUV422
 # Supported methods: SCREEN/DISPLAY (alias?), SCREEN_WITH_SOURCE_VIDEO, VIDEO, GRAPHIC, SOURCE/SCALER (alias?)
+
+# Alternatively, you can use this:
+luna-send -n 1 -f luna://com.webos.surfacemanager/captureCompositorOutput '{"output":"/tmp/capture.png","format":"PNG"}'
 ```
 
 ## Factorywin app (ezAdjust/inStart/inStop)
