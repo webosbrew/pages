@@ -44,6 +44,9 @@ luna-send -n 1 -f 'luna://com.webos.service.tv.capture/executeOneShot' '{"path":
 # Supported formats: BMP, JPG, PNG, RGB, RGBA, YUV422
 # Supported methods: SCREEN/DISPLAY (alias?), SCREEN_WITH_SOURCE_VIDEO, VIDEO, GRAPHIC, SOURCE/SCALER (alias?)
 
+# Alternatively, you can use this:
+luna-send -n 1 -f luna://com.webos.surfacemanager/captureCompositorOutput '{"output":"/tmp/capture.png","format":"PNG"}'
+
 # Launch a server to access the file(s) from a different device
 python3 -m server.http
 # Access over http://tv-ip:8000 then.
